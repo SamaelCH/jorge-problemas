@@ -9,20 +9,20 @@ fn main(){
     // Obtener base
     println!("Ingrese la base del triangulo");
     io::stdout().flush().unwrap();
-    let mut in_base = String::new();
-    io::stdin().read_line(&mut in_base).unwrap();
-    let base = in_base.trim().parse::<i32>().unwrap_or_else(|_| {
-        drop(in_base);
+    let mut put = String::new();
+    io::stdin().read_line(&mut put).unwrap();
+    let base = put.trim().parse::<i32>().unwrap_or_else(|_| {
+        drop(put);
         process::exit(1)
     });
 
     // Obtener altura
     println!("Ingrese la altura del triangulo");
     io::stdout().flush().unwrap();
-    let mut in_alt = String::new();
-    io::stdin().read_line(&mut in_alt).unwrap();
-    let alt = in_alt.trim().parse::<i32>().unwrap_or_else(|_| {
-        drop(in_alt);
+    put = String::new();
+    io::stdin().read_line(&mut put).unwrap();
+    let alt = put.trim().parse::<i32>().unwrap_or_else(|_| {
+        drop(put);
         process::exit(1);
     });
     // Area de triangulo
